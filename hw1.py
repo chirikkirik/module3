@@ -14,6 +14,9 @@ def string_info(string):
 def is_contains(string, list_to_search):
     count_calls()
 
+    string = string.lower()
+    list_to_search = [s.lower() for s in list_to_search]
+
     if string in list_to_search:
         return True
     else:
@@ -21,7 +24,7 @@ def is_contains(string, list_to_search):
 
 print(string_info("Crocodile"))
 print(string_info("Elephant"))
-print(is_contains("fox", ["wolf".casefold(), "cat".casefold() , "fOX".casefold()]))
+print(is_contains("fox", ["wolf", "cat", "fOX"]))
 print(is_contains("opel", ["nissan", "Lexus"]))
 print(calls)
 
